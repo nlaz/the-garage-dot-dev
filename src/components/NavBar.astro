@@ -1,61 +1,65 @@
----
-
----
-
-
+<nav>
   <ul>
     <li>
-      <a href="#0">hi@thegarage.dev</a>
+      <div>
+        <a href="mailto:hello@thegarage.dev">hello@thegarage.dev</a>
+      </div>
     </li>
     <li>
-      <a href="#0">Brooklyn, NY</a>
+      <div>
+        Brooklyn, NY
+      </div>
     </li>
     <li>
-      <a href="#0">1-800-BUILD-IT</a>
+      <div>
+        <a href="tel:6072845348">+1-607-BUILD-IT</a>
+      </div>
     </li>
   </ul>
-
+</nav>
 
 <style lang="scss">
+  nav {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 2.5rem;
+    right: 2.5rem;
+  }
+
   ul {
     list-style-type: none;
-    padding-left: 0;
-
+    padding: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    text-align: center;
-
-    font-size: 16px;
+    align-items: center;
 
     @media screen and (min-width: 768px) {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-
-      font-size: 1rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 
   li {
     padding: 0.2em 0.5em;
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
+    display: flex;
+    justify-content: center;
+  }
 
-    // background: var(--light);
+  li:first-child {
+    justify-content: flex-start;
+  }
 
-    // @media (prefers-color-scheme: dark) {
-    //   background: var(--dark);
-    // }
+  li:last-child {
+    justify-content: flex-end;
   }
 
   a {
     color: inherit;
     text-decoration: none;
-
     display: block;
     position: relative;
     padding: 0.2em 0;
-
     overflow: hidden;
   }
   
