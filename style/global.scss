@@ -1,0 +1,17 @@
+body {
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  background: var(--light);
+  color: var(--dark);
+}
+
+body {
+  @media (prefers-color-scheme: dark) {
+    background: var(--dark);
+    color: var(--light);
+  }
+}
